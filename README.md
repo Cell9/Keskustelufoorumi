@@ -19,3 +19,4 @@ Aiheiden määrittely, muokkaus ja poisto
 
 ## Linkki tietokantakaaviooni
 
+https://drive.google.com/file/d/119QECbq6THnTlMxDttBU-4y0KdjLc-6w/view?usp=sharing

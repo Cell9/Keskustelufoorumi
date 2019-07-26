@@ -5,14 +5,15 @@
     
 # Aihe:
 #### Projektin työaikaseuranta
-- Järjestelmä, jolla voidaan seurata projektiin käytettyä työaikaa. Järjestelmää on tarkoitus käyttää ohjelmistotuotantoprojekteissa sekä harjoitustöissä. Projektipäällikkö tai ohjaaja saa järjestelmältä yhteenvetoja käytetystä työajasta viikottain, henkilöittäin ja tehtävälajeittain. Kukin projektiin osallistuva henkilö kirjaa järjestelmän tekemänsä työtunnit, työlajin ja mahdollisen selityksen. Projektin osallistuja saa nähtäväkseen tekemänsä kirjaukset. Hän saa esiin myös itseensä liittyvät yhteenvetoraportit. Projektipäällikkö saa halutessaan käyttöönsä myös tiedot kunkin työntekijään yksityiskohtaisista kirjauksista.
+- keskustelufoorumi jonkin yhteisön, vaikkapa opiskelijajärjestön sisäiseen käyttöön. Käyttäjä voi lukea järjestelmän tallennettuja kirjoituksia ja lisätä tietokantaan uusia kirjoituksia, jotka voivat olla myös vastineita aiempiin kirjoituksiin. Kirjoituksia voi hakea kirjoittajan nimen tai aiheen tai artikkelin iän perusteella. Lukija voi seurata myös vastinepolkua. Oletusarvoisesti lukijalle näytetään kaikki tietty ikää tuoreemmat artikkelit varustettuna informaatiolla siitä onko lukija itse ja ovatko kaikki yhteisön jäsenet jo lukeneet artikkelin. Lukija identifioi aina itsensä ja artikkeleihin liitetään tieto henkilöistä jotka ovat lukeneet ne. Tämä tieto on kaikkien lukijoiden saatavissa.
+Järjestelmän ylläpitäjällä on oma liittymä, jonka kautta hän ylläpitää järjestön käyttäjien jäsentietoja ja heidän kuulumistan eri ryhmiin, siivota kirjoituskantaa ja määrittellä aiheita, joiden perusteella kirjoituksia voi ryhmitellä.
 - Ominaisuuksia:
 Kirjautuminen
-Työaikakirjauksen teko
-Projektin perustaminen
-Henkilön liittäminen projektiin
-Henkilön poistaminen projektista
-Projektipäällikön raportit
-Yksityiskohtainen työraportti
+Kirjoituksen lisääminen
+Kirjoitusten näyttäminen eri kriteerein
+Ryhmän jäsenen lisääminen, muokkaaminen ja poistaminen
+Vastineen laatiminen ja muokkaus
+Kirjoitusten poistaminen
+Aiheiden määrittely, muokkaus ja poisto
 ## Linkki tietokantakaaviooni
 

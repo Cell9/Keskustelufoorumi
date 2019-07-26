@@ -9,13 +9,13 @@
 
 Järjestelmän ylläpitäjällä on oma liittymä, jonka kautta hän ylläpitää järjestön käyttäjien jäsentietoja ja heidän kuulumistan eri ryhmiin, siivota kirjoituskantaa ja määrittellä aiheita, joiden perusteella kirjoituksia voi ryhmitellä.
 - Ominaisuuksia:
- Kirjautuminen
- Kirjoituksen lisääminen
- Kirjoitusten näyttäminen eri kriteerein
- Ryhmän jäsenen lisääminen, muokkaaminen ja poistaminen
- Vastineen laatiminen ja muokkaus
- Kirjoitusten poistaminen
- Aiheiden määrittely, muokkaus ja poisto
+Kirjautuminen
+Kirjoituksen lisääminen
+Kirjoitusten näyttäminen eri kriteerein
+Ryhmän jäsenen lisääminen, muokkaaminen ja poistaminen
+Vastineen laatiminen ja muokkaus
+Kirjoitusten poistaminen
+Aiheiden määrittely, muokkaus ja poisto
 
 ## Linkki tietokantakaaviooni
 

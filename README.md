@@ -16,5 +16,6 @@ Ryhmän jäsenen lisääminen, muokkaaminen ja poistaminen
 Vastineen laatiminen ja muokkaus
 Kirjoitusten poistaminen
 Aiheiden määrittely, muokkaus ja poisto
+
 ## Linkki tietokantakaaviooni
 

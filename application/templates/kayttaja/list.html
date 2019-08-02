@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <table>
+    <tr>
+      <th>Kayttaja</th>
+    </tr>
+    {% for kayttaja in kayttaja %}
+    <tr>
+      <td>{{ kayttaja.name }}</td>
+	  <td>
+		<form method="POST" action="{{ url_for('kayttaja_delete', kayttaja_id=kayttaja.id) }}">
+			<input type="submit" value="Delete"/>
+		</form>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

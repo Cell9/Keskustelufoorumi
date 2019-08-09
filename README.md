@@ -27,4 +27,5 @@ Kirjautumistunnukset tällä hetkellä: Username: hello   Password: world
 
 ## Linkki tietokantakaaviooni
 
+Löytyy myös dokumentaatio kansiosta .pdf-tiedostona
 https://drive.google.com/file/d/119QECbq6THnTlMxDttBU-4y0KdjLc-6w/view?usp=sharing

@@ -21,6 +21,10 @@ Aiheiden määrittely, muokkaus ja poisto
 
 https://keskustelufoorumi-tsoha-markus.herokuapp.com/
 
+## Tunnukset
+
+Kirjautumistunnukset tällä hetkellä: Username: hello   Password: world
+
 ## Linkki tietokantakaaviooni
 
 https://drive.google.com/file/d/119QECbq6THnTlMxDttBU-4y0KdjLc-6w/view?usp=sharing

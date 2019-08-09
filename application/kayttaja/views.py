@@ -1,6 +1,6 @@
 from application import app, db
 from flask import redirect, render_template, request, url_for
-from application.kayttaja.tiedot import Kayttaja
+from application.kayttaja.models import Kayttaja
 
 @app.route("/kayttaja/", methods=["GET"])
 def kayttaja_index():
@@ -11,11 +11,15 @@ def kayttaja_form():
     return render_template("kayttaja/new.html")
 
 @app.route("/kayttaja/<kayttaja_id>/", methods=["POST"])
-def kayttaja_delete(kayttaja_id):
+def kayttaja_active(kayttaja_id):
 
     t = Kayttaja.query.get(kayttaja_id)
-	
-    db.session().delete(t)    
+    if t.active == False:
+        t.active = True
+    else:
+        t.active = False
+
+
     db.session().commit()
   
     return redirect(url_for("kayttaja_index"))

@@ -4,13 +4,15 @@
   <table>
     <tr>
       <th>Kayttaja</th>
+	  <th>Active</th>
     </tr>
     {% for kayttaja in kayttaja %}
     <tr>
       <td>{{ kayttaja.name }}</td>
+	  <td>{{ kayttaja.active }}</td>
 	  <td>
-		<form method="POST" action="{{ url_for('kayttaja_delete', kayttaja_id=kayttaja.id) }}">
-			<input type="submit" value="Delete"/>
+		<form method="POST" action="{{ url_for('kayttaja_active', kayttaja_id=kayttaja.id) }}">
+			<input type="submit" value="Change activity"/>
 		</form>
       </td>
     </tr>

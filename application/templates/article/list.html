@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <table>
+    <tr>
+      <th>Article</th>
+	  <th>Email</th>
+	  <th>Active</th>
+    </tr>
+    {% for article in article %}
+    <tr>
+      <td>{{ article.name }}</td>
+	  <td>{{ article.email }}</td>
+	  <td>{{ article.active }}</td>
+	  <td>
+		<form method="POST" action="{{ url_for('article_active', article_id=article.id) }}">
+			<input type="submit" value="Change activity"/>
+		</form>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

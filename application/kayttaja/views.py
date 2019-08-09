@@ -1,6 +1,7 @@
 from application import app, db
 from flask import redirect, render_template, request, url_for
 from application.kayttaja.models import Kayttaja
+from application.kayttaja.forms import UserForm
 
 @app.route("/kayttaja/", methods=["GET"])
 def kayttaja_index():
@@ -8,7 +9,7 @@ def kayttaja_index():
 
 @app.route("/kayttaja/new/")
 def kayttaja_form():
-    return render_template("kayttaja/new.html")
+    return render_template("kayttaja/new.html", form = UserForm())
 
 @app.route("/kayttaja/<kayttaja_id>/", methods=["POST"])
 def kayttaja_active(kayttaja_id):
@@ -26,8 +27,13 @@ def kayttaja_active(kayttaja_id):
 
 @app.route("/kayttaja/", methods=["POST"])
 def kayttaja_create():
-    t = Kayttaja(request.form.get("name"))
+    form = UserForm(request.form)
+
+    if not form.validate():
+        return render_template("kayttaja/new.html", form = form)    
     
+    t = Kayttaja(form.name.data,form.email.data)
+ 
     db.session().add(t)
     db.session().commit()
   

@@ -1,7 +1,23 @@
 {% extends "layout.html" %}
 
 {% block body %}
-  <p>
-    Hei etusivu!
-  </p>
+<p>
+  Hello world!
+</p>
+
+{% if linked_posts is defined %}
+<p>
+  Posts linked to current user:
+</p>
+
+<ul>
+  {% for user in linked_posts %}
+  <li>
+    {{user.name}} {{user.postname}}}
+  </li>
+  {% endfor %}
+</ul>
+
+{% endif %}
+
 {% endblock %}

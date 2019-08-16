@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <table>
+    <tr>
+      <th>Group name</th>
+	  <th>Description</th>
+    </tr>
+    {% for groups in groups %}
+    <tr>
+      <td>{{ groups.name }}</td>
+	  <td>{{ groups.desc }}</td>
+	  <td>
+		<form method="POST" action="{{ url_for('groups_join', groups_id=groups.id) }}">
+			<input type="submit" value="Join group"/>
+		</form>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

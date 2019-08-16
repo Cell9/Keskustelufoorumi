@@ -43,7 +43,7 @@ class User(Base):
         stmt = text("SELECT Account.id, Account.name FROM Account"
                     " LEFT JOIN Article ON Article.account_id = Account.id"
                     " WHERE (Article.active IS True)"
-                    " GROUP BY Article.postname")
+                    " GROUP BY account.id")
         res = db.engine.execute(stmt)
   
         response = []

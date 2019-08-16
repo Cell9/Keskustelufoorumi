@@ -1,9 +1,11 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, validators
+from flask_login import login_required
+from wtforms import StringField, BooleanField,  TextAreaField, validators
 
-class UserForm(FlaskForm):
-    name = StringField("Username:", [validators.Length(min=2)])
-    email = StringField("Email:", [validators.Length(min=2)])
+class ArticleForm(FlaskForm):
+    postname = StringField("Article name:", [validators.DataRequired()])
+    active = BooleanField("Active")
+    text = TextAreaField('Text', [validators.DataRequired()] , render_kw={"rows": 70, "cols": 15}) 
  
     class Meta:
         csrf = False

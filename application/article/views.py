@@ -1,9 +1,9 @@
 from flask import redirect, render_template, request, url_for
-from flask_login import login_required
+from flask_login import login_required, current_user
 
 from application import app, db
 from application.article.models import Article
-from application.article.forms import UserForm
+from application.article.forms import ArticleForm
 
 @app.route("/article/", methods=["GET"])
 def article_index():
@@ -11,7 +11,7 @@ def article_index():
 
 @app.route("/article/new/")
 def article_form():
-    return render_template("article/new.html", form = UserForm())
+    return render_template("article/new.html", form = ArticleForm())
 
 
 @app.route("/article/<article_id>/", methods=["POST"])
@@ -32,12 +32,13 @@ def article_active(article_id):
 @app.route("/article/", methods=["POST"])
 @login_required
 def article_create():
-    form = UserForm(request.form)
+    form = ArticleForm(request.form)
 
     if not form.validate():
         return render_template("article/new.html", form = form)    
     
-    t = Article(form.name.data,form.email.data)
+    t = Article(form.postname.data, form.active.data, form.text.data)
+    t.account_id = current_user.id
  
     db.session().add(t)
     db.session().commit()

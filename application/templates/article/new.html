@@ -5,14 +5,14 @@
 	<table>
 		<tr>
 			<td>
-	  {{ form.name.label }}
+	  {{ form.postname.label }}
 			</td>
 			<td>
-	  {{ form.name }}
+	  {{ form.postname }}
 			</td>
 			<td>
 				<ul>
-			{% for error in form.name.errors %}
+			{% for error in form.postname.errors %}
 			<li>{{ error }}</li>
 			{% endfor %}
 				</ul>
@@ -20,14 +20,29 @@
 		</tr>
 		<tr>
 			<td>
-	  {{ form.email.label }}
+				{{ form.active.label }}
 			</td>
 			<td>
-	  {{ form.email }}
+				{{ form.active }}
+			</td>
+			<td>
+				<ul>
+			{% for error in form.active.errors %}
+			<li>{{ error }}</li>
+			{% endfor %}
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>
+	  {{ form.text.label }}
+			</td>
+			<td>
+	  {{ form.text }}
 			</td>
 						<td>
 				<ul>
-			{% for error in form.email.errors %}
+			{% for error in form.text.errors %}
 			<li>{{ error }}</li>
 			{% endfor %}
 				</ul>
@@ -35,7 +50,7 @@
 		</tr>
 			<tr>
 		<td colspan="3">
-  <input type="submit" value="Add a new user"/>
+  <input type="submit" value="Add a new post"/>
 			</td>
 		</tr>
 </form>

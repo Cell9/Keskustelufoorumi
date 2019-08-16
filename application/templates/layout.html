@@ -12,11 +12,12 @@
       </p>
       {% else %}
       <a href="{{ url_for('auth_login') }}">Login</a>
+	  <a href="{{ url_for('auth_form') }}">Register</a>
       {% endif %}
         
       <ul>
-	<li><a href="{{ url_for('article_index') }}">List users</a></li>
-	<li><a href="{{ url_for('article_form') }}">Add a user</a></li>
+	<li><a href="{{ url_for('article_index') }}">List posts</a></li>
+	<li><a href="{{ url_for('article_form') }}">Add a post</a></li>
       </ul>
 
     {% block body %}

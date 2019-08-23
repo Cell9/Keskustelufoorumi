@@ -47,11 +47,11 @@ class User(Base):
     def find_linked_active_posts():
         stmt = text("SELECT Account.id, Article.postname FROM Account"
                     " JOIN Article ON Article.account_id = Account.id"
-                    " GROUP BY Article.postname")
+                    " GROUP BY Account.id")
         res = db.engine.execute(stmt)
   
         response = []
         for row in res:
-            response.append({"":row[0], "postname":row[1]})
+            response.append({"id":row[0], "postname":row[1]})
 
         return response

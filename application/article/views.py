@@ -1,7 +1,7 @@
 from flask import redirect, render_template, request, url_for
-from flask_login import login_required, current_user
+from flask_login import  current_user
 
-from application import app, db
+from application import app, db, login_required
 from application.article.models import Article
 from application.article.forms import ArticleForm
 
@@ -20,7 +20,7 @@ def article_form():
 
 
 @app.route("/article/<article_id>/", methods=["POST"])
-@login_required
+@login_required(role="ADMIN")
 def article_active(article_id):
 
     t = Article.query.get(article_id)
@@ -35,7 +35,6 @@ def article_active(article_id):
     return redirect(url_for("article_index"))
 
 @app.route("/article/", methods=["POST"])
-@login_required
 def article_create():
     form = ArticleForm(request.form)
 
@@ -51,7 +50,7 @@ def article_create():
     return redirect(url_for("article_index"))
 
 @app.route("/article/<article_id>/", methods=["GET"])
-@login_required
+@login_required(role="ADMIN")
 def article_delete(article_id):
 
     t = Article.query.get(article_id)

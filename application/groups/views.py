@@ -1,7 +1,7 @@
 from flask import redirect, render_template, request, url_for
-from flask_login import login_required, current_user
+from flask_login import current_user
 
-from application import app, db, models
+from application import app, db, models, login_required
 from application.groups.models import Groups
 from application.groups.forms import GroupsForm
 
@@ -15,7 +15,7 @@ def groups_form():
 
 
 @app.route("/groups/<groups_id>/", methods=["POST"])
-@login_required
+
 def groups_join(groups_id):
 
         t = Groups.query.get(groups_id)
@@ -29,14 +29,14 @@ def groups_join(groups_id):
         return redirect(url_for("index"))
 
 @app.route("/groups/", methods=["POST"])
-@login_required
+
 def groups_create():
     form = GroupsForm(request.form)
 
     if not form.validate():
         return render_template("groups/new.html", form = form)    
-    
-    t = Groups(form.name.data, form.desc.data)
+    members = current_user.id
+    t = Groups(form.name.data, form.desc.data, members)
     t.account_id = current_user.id
  
     db.session().add(t)

@@ -1,4 +1,5 @@
-from application import db
+from flask_login import current_user
+from application import app, db, login_required
 
 
 class Base(db.Model):

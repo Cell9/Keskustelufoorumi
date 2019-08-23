@@ -1,5 +1,6 @@
 from application import db
 from application.models import Base
+from flask_login import current_user
 
 from sqlalchemy.sql import text
 
@@ -23,7 +24,8 @@ class User(Base):
         self.name = name
         self.username = username
         self.email = email
-        self.password = password 
+        self.password = password
+        
   
     def get_id(self):
         return self.id
@@ -40,14 +42,13 @@ class User(Base):
 
     @staticmethod
     def find_linked_active_posts():
-        stmt = text("SELECT Account.id, Account.name FROM Account"
-                    " LEFT JOIN Article ON Article.account_id = Account.id"
-                    " WHERE (Article.active IS True)"
-                    " GROUP BY account.id")
+        stmt = text("SELECT Account.id, Article.postname FROM Account"
+                    " JOIN Article ON Article.account_id = Account.id"
+                    " GROUP BY Article.postname")
         res = db.engine.execute(stmt)
   
         response = []
         for row in res:
-            response.append({"name":row[0], "articles.postname":row[1]})
+            response.append({"":row[0], "postname":row[1]})
 
         return response

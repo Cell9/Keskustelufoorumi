@@ -4,7 +4,7 @@ from wtforms import StringField, TextAreaField, validators
 
 class GroupsForm(FlaskForm):
     name = StringField("Group name:", [validators.DataRequired()])
-    desc = TextAreaField('Description:', [validators.DataRequired()] , render_kw={"rows": 10, "cols": 20}) 
+    desc = TextAreaField('Description:', [validators.DataRequired()] , render_kw={"rows": 15, "cols": 40}) 
  
     class Meta:
         csrf = False

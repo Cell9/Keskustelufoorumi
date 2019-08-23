@@ -9,6 +9,11 @@ from application.article.forms import ArticleForm
 def article_index():
     return render_template("article/list.html", article = Article.query.all())
 
+@app.route("/article/<article_id>")
+def article_view(article_id):
+    return render_template("article/post.html", article = Article.query.get(article_id))
+
+
 @app.route("/article/new/")
 def article_form():
     return render_template("article/new.html", form = ArticleForm())
@@ -41,6 +46,18 @@ def article_create():
     t.account_id = current_user.id
  
     db.session().add(t)
+    db.session().commit()
+  
+    return redirect(url_for("article_index"))
+
+@app.route("/article/<article_id>/", methods=["GET"])
+@login_required
+def article_delete(article_id):
+
+    t = Article.query.get(article_id)
+    
+ 
+    db.session().delete(t)
     db.session().commit()
   
     return redirect(url_for("article_index"))

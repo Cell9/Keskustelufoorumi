@@ -1,5 +1,6 @@
 from application import db
 from application.models import Base
+import random
 
 class Article(Base):
     id = db.Column(db.Integer, primary_key=True)
@@ -11,6 +12,7 @@ class Article(Base):
     active = db.Column(db.Boolean, nullable=False)
     text = db.Column(db.String(2000), nullable=False)
 
+
     account_id = db.Column(db.Integer, db.ForeignKey('account.id'),
                             nullable=False)
 
@@ -18,3 +20,4 @@ class Article(Base):
         self.postname = postname
         self.active = True
         self.text = text
+

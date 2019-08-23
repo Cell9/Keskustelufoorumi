@@ -19,10 +19,12 @@ def groups_form():
 def groups_join(groups_id):
 
         t = Groups.query.get(groups_id)
+        t.account_id = current_user.id
+        
         
         db.session().add(t)
         db.session().commit()
-
+        
 
         return redirect(url_for("index"))
 

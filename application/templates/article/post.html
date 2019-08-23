@@ -2,22 +2,20 @@
 
 {% block body %}
   <table>
-    <tr>
-      <th>Article</th>
-	  <th>When posted</th>
-	  <th>Active</th>
-    </tr>
-    {% for article in article %}
-    <tr>
-      <td>{{ article.postname }}</td>
-	  <td>{{ article.date_created }}</td>
-	  <td>{{ article.active }}</td>
-	  <td>
-		<form method="POST" action="{{ url_for('article_active', article_id=article.id) }}">
-			<input type="submit" value="Change activity"/>
-		</form>
-      </td>
-    </tr>
-    {% endfor %}
+  
+  <header>
+	<b>
+	{{ article.postname }}
+	</b>
+  </header>
+		<textarea rows="15" cols="90" readonly>
+			{{ article.text }}
+		</textarea>
+
+      
+	  <th><small>Posted: {{ article.date_created }}</small></th>
+	  
+
+
   </table>
 {% endblock %}

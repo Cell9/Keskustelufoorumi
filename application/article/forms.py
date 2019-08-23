@@ -4,8 +4,8 @@ from wtforms import StringField, BooleanField,  TextAreaField, validators
 
 class ArticleForm(FlaskForm):
     postname = StringField("Article name:", [validators.DataRequired()])
-    active = BooleanField("Active")
-    text = TextAreaField('Text', [validators.DataRequired()] , render_kw={"rows": 70, "cols": 15}) 
+    active = BooleanField("Inactive:")
+    text = TextAreaField('Text:', [validators.DataRequired()] , render_kw={"rows": 15, "cols": 70}) 
  
     class Meta:
         csrf = False

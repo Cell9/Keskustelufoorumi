@@ -13,8 +13,18 @@
 	  <td>{{ article.date_created }}</td>
 	  <td>{{ article.active }}</td>
 	  <td>
+		<form action="{{ url_for('article_view', article_id=article.id) }}">
+			<input type="submit" value="View post"/>
+		</form>
+      </td>
+	  <td>
 		<form method="POST" action="{{ url_for('article_active', article_id=article.id) }}">
 			<input type="submit" value="Change activity"/>
+		</form>
+      </td>
+	  <td>
+		<form method="GET" action="{{ url_for('article_delete', article_id=article.id) }}">
+			<input type="submit" value="Delete"/>
 		</form>
       </td>
     </tr>

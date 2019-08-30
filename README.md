@@ -5,9 +5,9 @@
     
 # Aihe:
 #### Keskustelufoorumi
-- Keskustelufoorumi jonkin yhteisön käyttöön. Käyttäjä voi lukea järjestelmän tallennettuja kirjoituksia ja lisätä tietokantaan uusia kirjoituksia, jotka voivat olla myös vastineita aiempiin kirjoituksiin. Lukija voi myös selata kirjoituksiin liittyviä vatineita. Lukija identifioi aina itsensä.
 
-Järjestelmän ylläpitäjällä on omat oikeudet, jonka kautta hän ylläpitää järjestön käyttäjien jäsentietoja ja siivota kirjoituskantaa
+- Keskustelufoorumi jonkin yhteisön käyttöön. Käyttäjä voi lukea järjestelmän tallennettuja kirjoituksia ja lisätä tietokantaan uusia kirjoituksia, ja luoda vastineita aiempiin kirjoituksiin. Lukija voi myös selata kirjoituksiin liittyviä vastineita. Kirjoittaja identifioi aina itsensä.
+Järjestelmän ylläpitäjällä on omat oikeudet, jonka kautta hän ylläpitää kirjoituskantaa
 
 - Ominaisuuksia:
 
@@ -15,11 +15,20 @@ Kirjautuminen
 
 Kirjoituksen lisääminen
 
+Kirjoitusten poistaminen, aktiivisuuden muuttaminen ja katseleminen
+
 Ryhmän jäsenen lisääminen ja muokkaaminen
 
-Vastineen laatiminen ja tarkastelu
+Vastineen luominen ja tarkastelu
 
-Kirjoitusten poistaminen, aktiivisuuden muuttaminen ja katseleminen
+
+## Puuttuvia ominaisuuksia
+
+- Vaatimaton ulkoasu
+- Ei käyttäjien tai ryhmien välistä viestintää
+- Vain mahdollisuus poistaa viestejä eikä muokkaa niitä
+- Ei vastineiden vastineita
+- Ei haku ominaisuutta
 
 
 ## Heroku

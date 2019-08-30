@@ -5,17 +5,17 @@
     
 # Aihe:
 #### Keskustelufoorumi
-- Keskustelufoorumi jonkin yhteisön, vaikkapa opiskelijajärjestön sisäiseen käyttöön. Käyttäjä voi lukea järjestelmän tallennettuja kirjoituksia ja lisätä tietokantaan uusia kirjoituksia, jotka voivat olla myös vastineita aiempiin kirjoituksiin. Kirjoituksia voi hakea kirjoittajan nimen tai aiheen tai artikkelin iän perusteella. Lukija voi seurata myös vastinepolkua. Oletusarvoisesti lukijalle näytetään kaikki tietty ikää tuoreemmat artikkelit. Lukija identifioi aina itsensä ja artikkeleihin liitetään tieto henkilöistä jotka ovat lukeneet ne. Tämä tieto on kaikkien lukijoiden saatavissa.
+- Keskustelufoorumi jonkin yhteisön käyttöön. Käyttäjä voi lukea järjestelmän tallennettuja kirjoituksia ja lisätä tietokantaan uusia kirjoituksia, jotka voivat olla myös vastineita aiempiin kirjoituksiin. 
+Lukija voi myös selata kirjoituksiin liittyviä vatineita. Lukija identifioi aina itsensä.
+Järjestelmän ylläpitäjällä on omat oikeudet, jonka kautta hän ylläpitää järjestön käyttäjien jäsentietoja ja siivota kirjoituskantaa
 
-Järjestelmän ylläpitäjällä on oma liittymä, jonka kautta hän ylläpitää järjestön käyttäjien jäsentietoja ja heidän kuulumistan eri ryhmiin, siivota kirjoituskantaa ja määrittellä aiheita, joiden perusteella kirjoituksia voi ryhmitellä.
 - Ominaisuuksia:
 Kirjautuminen
 Kirjoituksen lisääminen
-Kirjoitusten näyttäminen eri kriteerein
-Ryhmän jäsenen lisääminen, muokkaaminen ja poistaminen
-Vastineen laatiminen ja muokkaus
-Kirjoitusten poistaminen
-Aiheiden määrittely, muokkaus ja poisto
+Ryhmän jäsenen lisääminen ja muokkaaminen
+Vastineen laatiminen ja tarkastelu
+Kirjoitusten poistaminen, aktiivisuuden muuttaminen ja katseleminen
+
 
 ## Heroku
 
@@ -23,7 +23,9 @@ https://keskustelufoorumi-tsoha-markus.herokuapp.com/
 
 ## Tunnukset
 
-Kirjautumistunnukset tällä hetkellä: Username: hello   Password: world
+Ylläpitäjän käyttäjätunnukset ovat tällä hetkellä: Username: admin   Password: admin
+
+Normaalit tunnukset voi luoda käyttäen kirjautumisominaisuutta.
 
 ## Linkki tietokantakaaviooni
 

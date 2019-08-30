@@ -5,15 +5,20 @@
     
 # Aihe:
 #### Keskustelufoorumi
-- Keskustelufoorumi jonkin yhteisön käyttöön. Käyttäjä voi lukea järjestelmän tallennettuja kirjoituksia ja lisätä tietokantaan uusia kirjoituksia, jotka voivat olla myös vastineita aiempiin kirjoituksiin. 
-Lukija voi myös selata kirjoituksiin liittyviä vatineita. Lukija identifioi aina itsensä.
+- Keskustelufoorumi jonkin yhteisön käyttöön. Käyttäjä voi lukea järjestelmän tallennettuja kirjoituksia ja lisätä tietokantaan uusia kirjoituksia, jotka voivat olla myös vastineita aiempiin kirjoituksiin. Lukija voi myös selata kirjoituksiin liittyviä vatineita. Lukija identifioi aina itsensä.
+
 Järjestelmän ylläpitäjällä on omat oikeudet, jonka kautta hän ylläpitää järjestön käyttäjien jäsentietoja ja siivota kirjoituskantaa
 
 - Ominaisuuksia:
+
 Kirjautuminen
+
 Kirjoituksen lisääminen
+
 Ryhmän jäsenen lisääminen ja muokkaaminen
+
 Vastineen laatiminen ja tarkastelu
+
 Kirjoitusten poistaminen, aktiivisuuden muuttaminen ja katseleminen
 
 

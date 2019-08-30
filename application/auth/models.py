@@ -17,8 +17,8 @@ class User(Base):
     password = db.Column(db.String(144), nullable=False)
 
     articles = db.relationship("Article", backref='account', lazy =True)
-    groups = db.relationship("Groups", backref='groups', lazy =True)
-
+    groups = db.relationship("Groups", backref='account', lazy =True)
+ #   responses = db.relationship("Response", backref='account', lazy =True)
     
     def __init__(self, name, username, email, password):
         self.name = name
@@ -40,7 +40,10 @@ class User(Base):
         return True
 
     def roles(self):
-        return ["ADMIN"]
+        if self.username != "admin" and self.password != "admin":
+            return["ANY"]
+        else:
+            return ["ADMIN"]
 
 
     @staticmethod

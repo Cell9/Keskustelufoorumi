@@ -14,8 +14,17 @@
 
       
 	  <th><small>Posted: {{ article.date_created }}</small></th>
-	  
-
-
+	 <th>	 
+			<a href="{{ url_for('response_create') }}">Add response</a>
+	</th>
+	 <tr>
+	 
+	{% for user in linked_responses %}
+	  <li>
+		{{user.id}} {{user.postname}}
+	</li>
+		{% endfor %}
+  
+    </tr>
   </table>
 {% endblock %}

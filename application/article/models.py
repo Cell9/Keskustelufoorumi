@@ -12,7 +12,7 @@ class Article(Base):
     active = db.Column(db.Boolean, nullable=False)
     text = db.Column(db.String(2000), nullable=False)
 
-
+    responses = db.relationship("Response", backref='article', lazy =True)
     account_id = db.Column(db.Integer, db.ForeignKey('account.id'),
                             nullable=False)
 

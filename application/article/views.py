@@ -35,6 +35,7 @@ def article_active(article_id):
     return redirect(url_for("article_index"))
 
 @app.route("/article/", methods=["POST"])
+@login_required(role="ANY" or "ADMIN")
 def article_create():
     form = ArticleForm(request.form)
 

@@ -17,7 +17,7 @@ Kirjoituksen lisääminen
 
 Kirjoitusten poistaminen, aktiivisuuden muuttaminen ja katseleminen
 
-Ryhmän jäsenen lisääminen ja muokkaaminen
+Ryhmän luominen ja jäsenen liittyminen
 
 Vastineen luominen ja tarkastelu
 
@@ -29,6 +29,7 @@ Vastineen luominen ja tarkastelu
 - Vain mahdollisuus poistaa viestejä eikä muokkaa niitä
 - Ei vastineiden vastineita
 - Ei haku ominaisuutta
+- Ryhmillä ei ole varsinaista funktionaalisuustta
 
 
 ## Heroku

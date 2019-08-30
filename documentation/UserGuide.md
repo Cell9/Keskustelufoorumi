@@ -17,7 +17,7 @@ Listaa käyttäjiin liittyvien kirjoitusten nimet.
 
 ## Kirjoitukset
 
-- Uusi "post": yläpalkki "Add a post" -> Anna nimi, päätä onko viesti actiivinen, kirjoita teksti. -> paina "Add a new post" 
+- Uusi kirjoitus: yläpalkki "Add a post" -> Anna nimi, päätä onko viesti actiivinen, kirjoita teksti. -> paina "Add a new post" 
                                       -> ohjaa "artikkelien" listaan
 
 - Näytä kirjoitukset: yläpalkki "List posts" -> ohjaa "artikkelien" listaan

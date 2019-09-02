@@ -18,7 +18,6 @@ class User(Base):
 
     articles = db.relationship("Article", backref='account', lazy =True)
     groups = db.relationship("Groups", backref='account', lazy =True)
- #   responses = db.relationship("Response", backref='account', lazy =True)
     
     def __init__(self, name, username, email, password):
         self.name = name
@@ -45,16 +44,16 @@ class User(Base):
         else:
             return ["ADMIN"]
 
-
-    @staticmethod
-    def find_linked_active_posts():
+        
+    @staticmethod   
+    def find_active_posts():
         stmt = text("SELECT Account.id, Article.postname FROM Account"
-                    " JOIN Article ON Article.account_id = Account.id"
-                    " GROUP BY Account.id, Article.postname")
+                    " INNER JOIN Article ON Article.account_id = Account.id"
+                    " WHERE (Article.active = True)")
         res = db.engine.execute(stmt)
   
         response = []
         for row in res:
-            response.append({"id":row[0], "postname":row[1]})
+            response.append({ "postname":row[1]})
 
         return response

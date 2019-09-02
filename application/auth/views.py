@@ -37,6 +37,10 @@ def auth_create():
 
     if not form.validate():
         return render_template("auth/new.html", form = form)    
+
+    if form.username.data == "admin" and form.password.data == "admin":
+        return render_template("auth/new.html", form = form,
+                               error = "Selected username and password are not allowed")
     
     t = User(form.name.data, form.username.data, form.email.data, form.password.data)
  

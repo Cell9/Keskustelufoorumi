@@ -5,4 +5,4 @@ from application.article.models import Article
 
 @app.route('/')
 def index():
-    return render_template("index.html", linked_posts=User.find_linked_active_posts())
+    return render_template("index.html", active_posts=User.find_active_posts())

@@ -4,29 +4,43 @@
   <table>
     <tr>
       <th>Article</th>
+	  &nbsp;
 	  <th>When posted</th>
+	  &nbsp;
 	  <th>Active</th>
+	  &nbsp;
     </tr>
     {% for article in article %}
     <tr>
       <td>{{ article.postname }}</td>
+	  &nbsp;
 	  <td>{{ article.date_created }}</td>
+	  &nbsp;
 	  <td>{{ article.active }}</td>
+	  &nbsp;
+	  
+	  {% if current_user.is_authenticated %}
 	  <td>
 		<form action="{{ url_for('article_view', article_id=article.id) }}">
 			<input type="submit" value="View post"/>
 		</form>
       </td>
+	  {% endif %}
+	  {% if current_user.is_authenticated %}
+	  {% if current_user.username == "admin" and current_user.username == "admin"  %}
 	  <td>
 		<form method="POST" action="{{ url_for('article_active', article_id=article.id) }}">
 			<input type="submit" value="Change activity"/>
 		</form>
       </td>
+	  &nbsp;
 	  <td>
 		<form method="GET" action="{{ url_for('article_delete', article_id=article.id) }}">
 			<input type="submit" value="Delete"/>
 		</form>
       </td>
+	  {% endif %}
+	  {% endif %}
     </tr>
     {% endfor %}
   </table>

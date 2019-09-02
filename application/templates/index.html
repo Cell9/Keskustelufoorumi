@@ -5,13 +5,13 @@
   Hello world!
 </p>
 
-{% if linked_posts is defined %}
+{% if active_posts is defined %}
 <p>
-  Posts linked to current user:
+  Current active posts:
 </p>
 
 <ul>
-  {% for user in linked_posts %}
+  {% for user in active_posts %}
   <li>
     {{user.id}} {{user.postname}}
   </li>

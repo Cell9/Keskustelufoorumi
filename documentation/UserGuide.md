@@ -5,7 +5,12 @@ Alla on kuvattu reitit tällä hetkellä toteutettujen toiminnallisuuksien suori
 
 ## Etusivu
 
-Listaa käyttäjiin liittyvien kirjoitusten nimet. 
+Listaa aktiiviset kirjoitukset kyselyllä:
+```
+text("SELECT Account.id, Article.postname FROM Account"
+                    " INNER JOIN Article ON Article.account_id = Account.id"
+                    " WHERE (Article.active = True)")
+```
 
 ## Kirjautuminen
 

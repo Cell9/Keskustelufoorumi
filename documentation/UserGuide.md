@@ -32,6 +32,3 @@ Listaa käyttäjiin liittyvien kirjoitusten nimet.
 
 - Luominen: yläpalkki "Create a group" -> syötä tiedot
 - Liittyminen: yläpalkki "Join a group" -> liittyäksesi paina Join group
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)

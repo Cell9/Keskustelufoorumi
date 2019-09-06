@@ -48,5 +48,7 @@ Normaalit tunnukset voi luoda käyttäen kirjautumisominaisuutta.
 
 ## Linkki tietokantakaaviooni
 
-Löytyy myös dokumentaatio-kansiosta .pdf-tiedostona
+Löytyy myös dokumentaatio-kansiosta .pdf-tiedostona nimellä "Keskustelufoorumi.pdf"
+
+
 https://drive.google.com/file/d/119QECbq6THnTlMxDttBU-4y0KdjLc-6w/view?usp=sharing

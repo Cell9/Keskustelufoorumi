@@ -11,11 +11,12 @@ class User(Base):
     id = db.Column(db.Integer, primary_key=True)
 
 
-    name = db.Column(db.String(144), nullable=False)
-    username = db.Column(db.String(144), nullable=False)
-    email = db.Column(db.String(144), nullable=False)
-    password = db.Column(db.String(144), nullable=False)
+    name = db.Column(db.String(60), nullable=False)
+    username = db.Column(db.String(60), nullable=False)
+    email = db.Column(db.String(60), nullable=False)
+    password = db.Column(db.String(100), nullable=False)
 
+    responses = db.relationship("Response", backref='account', lazy =True)
     articles = db.relationship("Article", backref='account', lazy =True)
     groups = db.relationship("Groups", backref='account', lazy =True)
     

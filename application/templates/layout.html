@@ -22,7 +22,7 @@
             </li>
 			{% if current_user.is_authenticated %}
             <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('article_form') }} ">Add a post</a>
+              <a class="nav-link" href="{{ url_for('article_create') }} ">Add a post</a>
             </li>
 			{% endif %}
           </ul>

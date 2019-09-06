@@ -1,28 +1,72 @@
 {% extends "layout.html" %}
 
 {% block body %}
+	<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+			}
+
+div {
+  width: 450px;
+  word-break: break-all;
+  white-space: normal;
+	}
+
+</style>
   <table>
   
   <header>
-	<b>
+	<h2>
 	{{ article.postname }}
-	</b>
+	</h2>
   </header>
-		<textarea rows="15" cols="90" readonly>
+		<textarea rows="15" cols="100" readonly>
 			{{ article.text }}
 		</textarea>
-
-      
+ 
 	  <th><small>Posted: {{ article.date_created }}</small></th>
-	 <th>	 
-			<a href="{{ url_for('response_create') }}">Add response</a>
-	</th>
-	 <tr>
-	 
-	{% for user in linked_responses %}
-	  <li>
-		{{user.id}} {{user.postname}}
-	</li>
+	  
+	<tr>  
+		<th>	 
+			<form method="GET" action="{{ url_for('response_create', article_id=article_id) }}">
+				<input type="submit" value="Add a response"/>
+		</th>
+	</tr>
+
+	</table>
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	<table>
+	
+	<thead>
+	<tr>	
+         <th style="font-weight: normal"><u> User </u></th>
+         <th style="font-weight: normal"><u> Response </u></th>
+         
+    </tr>
+	 </thead>
+
+	{% for row in responseData %}
+         <tr>
+            <td id="td02">
+               <table cellspacing="1">
+                  <tr><td colspan="3" style="font-weight:bold">{{ row[1] }}</td></tr>
+                  
+                  <tr><td><small>Created:</small></td></tr>
+                  <tr><td><small>{{ row[4] }}</small></td></tr>
+                 
+               </table>
+            </td>
+
+            <td id="td01"><pre class="pre_post"><div>{{ row[3] }}</div></pre></td>
+
+
+         </tr>
 		{% endfor %}
   
     </tr>

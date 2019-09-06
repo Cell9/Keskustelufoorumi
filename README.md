@@ -6,8 +6,11 @@
 # Aihe:
 #### Keskustelufoorumi
 
-- Keskustelufoorumi jonkin yhteisön käyttöön. Käyttäjä voi lukea järjestelmän tallennettuja kirjoituksia ja lisätä tietokantaan uusia kirjoituksia, ja luoda vastineita aiempiin kirjoituksiin. Lukija voi myös selata kirjoituksiin liittyviä vastineita. Kirjoittaja identifioi aina itsensä.
-Järjestelmän ylläpitäjällä on omat oikeudet, jonka kautta hän ylläpitää kirjoituskantaa
+- Keskustelufoorumi jonkin yhteisön käyttöön. Käyttäjä voi lukea järjestelmän tallennettuja kirjoituksia ja lisätä tietokantaan uusia kirjoituksia, ja luoda vastineita aiempiin kirjoituksiin. Lukija voi myös selata kirjoituksiin liittyviä vastineita. Kirjoittaja identifioi aina itsensä tehdessään muuta kuin olemassaolevien kirjoitusten nimien tarkastelua.
+
+Ohjelmassa on kaksi käyttäjä tyyppiä: yleinen ja ylläpitäjä. Yleinen käyttäjä voi käyttää useimpia ominaisuuksia. Ylläpitäjällä on omat oikeudet, jonka kautta hän ylläpitää kirjoituskantaa.
+
+Tulevaisuudessa olisi järkevää laajentaa eri komponettien muokkaus -ja poistomahdollisuuksia sekä tehdä ryhmistä merkityksellisempiä. Hakuominaisuuskin olisi hyvä lisätä. Lisäksi ulkonäköä voisi parantaa.
 
 - Ominaisuuksia:
 
@@ -27,8 +30,9 @@ Vastineen luominen ja tarkastelu
 - Vaatimaton ulkoasu
 - Ei käyttäjien tai ryhmien välistä viestintää
 - Vain mahdollisuus poistaa viestejä eikä muokkaa niitä
+- Ei käyttäjien poistoa
 - Ei vastineiden vastineita
-- Ei haku ominaisuutta
+- Ei hakuominaisuutta
 - Ryhmillä ei ole varsinaista funktionaalisuustta
 
 
@@ -44,5 +48,5 @@ Normaalit tunnukset voi luoda käyttäen kirjautumisominaisuutta.
 
 ## Linkki tietokantakaaviooni
 
-Löytyy myös dokumentaatio kansiosta .pdf-tiedostona
+Löytyy myös dokumentaatio-kansiosta .pdf-tiedostona
 https://drive.google.com/file/d/119QECbq6THnTlMxDttBU-4y0KdjLc-6w/view?usp=sharing
